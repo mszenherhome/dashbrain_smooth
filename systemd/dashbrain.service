@@ -1,0 +1,15 @@
+[Unit]
+Description=DashBrain autonomous controller
+After=bluetooth.target network.target
+Wants=bluetooth.target
+
+[Service]
+Type=simple
+WorkingDirectory=%h/dashbrain
+ExecStart=%h/dashbrain/.venv/bin/python -m dashbrain.main
+Restart=on-failure
+RestartSec=3
+Nice=-5
+
+[Install]
+WantedBy=default.target

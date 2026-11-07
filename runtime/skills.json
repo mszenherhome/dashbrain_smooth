@@ -1,0 +1,8 @@
+{
+  "button_attention": true,
+  "curiosity_sound": true,
+  "explore": true,
+  "head_scan": true,
+  "obstacle_avoid": false,
+  "stuck_recovery": true
+}

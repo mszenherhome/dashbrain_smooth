@@ -1,0 +1,13 @@
+[Unit]
+Description=Local llama.cpp server for DashBrain
+After=network.target
+
+[Service]
+Type=simple
+WorkingDirectory=%h/dashbrain
+ExecStart=%h/dashbrain/scripts/start_llama.sh %h/models/Qwen3-0.6B-Q4_0.gguf
+Restart=on-failure
+RestartSec=3
+
+[Install]
+WantedBy=default.target
